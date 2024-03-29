@@ -17,32 +17,31 @@
     <div class="card">
         <div class="card-body card-body-custom">
             <div class="body-wrapper">
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary flex-md-row-reverse">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="#">Navbar</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent" tabindex="-1">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Link</a>
-                                    </li>
-                                    <li> <button class="btn btn-dark" id="themeToggleBtn">Toggle Theme</button></li>
-                                </ul>
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-                            </div>
+                <nav class="navbar navbar-expand-lg bg-body-tertiary flex-md-row-reverse">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent" tabindex="-1">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li> <button class="btn btn-dark" id="themeToggleBtn">Toggle Theme</button></li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
                         </div>
-                    </nav>
+                    </div>
+                </nav>
 
             </div>
 
@@ -98,11 +97,11 @@
                                         <div class="form-wrapper">
 
                                             <div class="card">
-                                                <div class="card-body">
+                                                <div class="card-body p-5">
 
                                                     <form>
                                                         <h2 class="poppins">Leave Request</h2>
-                                                        <div class="row g-5 mb-5" >
+                                                        <div class="row g-5 mb-5">
                                                             <div class="col gx-3">
                                                                 <div class="">
 
@@ -138,7 +137,7 @@
                                                         </div>
                                                     </form>
 
-                                                    <div class="row"  id="repeatRow">
+                                                    <div class="row" id="repeatRow">
 
                                                         <div class="col gx-3">
                                                             <div class="">
@@ -166,15 +165,17 @@
 
                                                 </div>
 
-                                                
-                                    
+
+
                                                 <div class="row mb-3 align-self-center">
-                                                            
-                                                    <div class="col-6 pt-4"> 
-                                                        <button type="button" class="btn btn-outline-success" onclick="addRow()">Add</button>
+
+                                                    <div class="col-6 pt-4">
+                                                        <button type="button" class="btn btn-outline-success"
+                                                            onclick="addRow()">Add</button>
                                                     </div>
-                                                    <div class="col-6 pt-4 "> 
-                                                        <button type="button" class="btn btn-outline-danger" onclick="removeRow()">Remove</button>
+                                                    <div class="col-6 pt-4 ">
+                                                        <button type="button" class="btn btn-outline-danger"
+                                                            onclick="removeRow()">Remove</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -207,8 +208,8 @@
                         htmlTag.setAttribute('data-bs-theme', 'dark');
                 });
 
-                 // Function to calculate total days
-                 function calculateTotalDays() {
+                // Function to calculate total days
+                function calculateTotalDays() {
                     const fromDate = document.getElementById('exampleInputfromdate').value;
                     const toDate = document.getElementById('exampleInputtodate').value;
 
@@ -223,8 +224,8 @@
                     const differenceDays = Math.ceil(differenceMs / (1000 * 60 * 60 * 24));
 
                     // Set the value of Total Days input
-                    document.getElementById('exampleInputtotaldays').value = differenceDays == NaN ? 0 :differenceDays;
-                   
+                    document.getElementById('exampleInputtotaldays').value = differenceDays == NaN ? 0 : differenceDays;
+
                 }
 
                 // Attach event listeners to From Date and To Date inputs
@@ -233,8 +234,8 @@
 
 
 
-                   // Function to add a row
-                   function addRow() {
+                // Function to add a row
+                function addRow() {
                     const rowToClone = document.getElementById('repeatRow');
                     const clonedRow = rowToClone.cloneNode(true);
                     rowToClone.parentNode.appendChild(clonedRow);
@@ -242,12 +243,12 @@
 
                 // Function to remove a row
                 function removeRow() {
-    const rows = document.getElementById('repeatRow');
-    console.log(rows.length)
-    if (rows.length > 1) {
-        rows[rows.length - 1].parentNode.removeChild(rows[rows.length - 1]);
-    }
-}
+                    const rows = document.getElementById('repeatRow');
+                    console.log(rows.length)
+                    if (rows.length > 1) {
+                        rows[rows.length - 1].parentNode.removeChild(rows[rows.length - 1]);
+                    }
+                }
             </script>
         </div>
     </div>
