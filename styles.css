@@ -41,34 +41,6 @@ body .card .card-body-custom {
 }
 
 
-/* calender */
-
-.calendar-container {
-    /* margin-top: 50px; */
-}
-
-.calendar-container .calendar-body .row {
-    height: 30px;
-}
-.calendar-container .calendar-body .row .col {
-    height: 30px;
-}
-.calendar-header {
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-.calendar-body {
-    /* border: 1px solid #dee2e6; */
-}
-.calendar-day {
-    border: 1px solid #dee2e6;
-    height: 100px;
-}
-
-
-
 /* theme */
 
 [data-bs-theme="blue"] {

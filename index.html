@@ -12,6 +12,7 @@
 
 
 </head>
+<title>Leave Request</title>
 
 <body>
     <div class="card">
@@ -19,26 +20,27 @@
             <div class="body-wrapper">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary flex-md-row-reverse">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Navbar</a>
+                        <a class="navbar-brand" href="#">Leave Request</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent" tabindex="-1">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav mb-2 me-auto mb-lg-0">
+
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li> <button class="btn btn-dark" id="themeToggleBtn">Toggle Theme</button></li>
                             </ul>
-                            <form class="d-flex" role="search">
+                            <form class="d-flex me-4" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit">Search</button>
                             </form>
+
+                            <ul class="navbar-nav mb-2 mb-lg-0 gy-5">
+                                <li> <button class="btn btn-dark" id="themeToggleBtn">Toggle Theme</button></li>
+                            </ul>
                         </div>
                     </div>
                 </nav>
@@ -82,78 +84,80 @@
                     <div class="card-body">
                         <div class="container-fluid">
                             <div class="form-details-wrapper">
-                                <div class="row gy-5">
+                                <div class="row justify-content-center gy-5">
                                     <div class="col-lg-5">
-                                        <div class="form-wrapper card-height">
-                                            <div class="card card-height">
-                                                <div class="card-body p-4">
-                                                    <form>
-                                                        <h2 class="poppins font26">Request Leave</h2>
-                                                        <div class="row g-5 mb-5">
-                                                            <div class="col-lg-4 gx-3">
-                                                                <label for="exampleInputfromdate"
-                                                                    class="form-label poppins">From Date</label>
-                                                                <input type="date" class="form-control"
-                                                                    id="exampleInputfromdate"
-                                                                    aria-describedby="fromdate">
+
+                                        <div class="card card-height">
+                                            <div class="card-body p-3">
+
+                                               <div class="row card-height justify-content-center">
+                                                <div class="col align-self-center">
+                                                        <form>
+                                                            <h2 class="poppins font26">Request Leave</h2>
+                                                            <div class="row">
+                                                                <div class="col-lg-4 col-md-4">
+                                                                    <label for="exampleInputfromdate"
+                                                                        class="form-label poppins">From Date</label>
+                                                                    <input type="date" class="form-control"
+                                                                        id="exampleInputfromdate"
+                                                                        aria-describedby="fromdate">
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-4">
+                                                                    <label for="exampleInputtodate"
+                                                                        class="form-label poppins">To Date</label>
+                                                                    <input type="date" class="form-control"
+                                                                        id="exampleInputtodate"
+                                                                        aria-describedby="todate">
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-4">
+                                                                    <label for="exampleInputtotaldays"
+                                                                        class="form-label poppins">Total Days</label>
+                                                                    <input type="text" class="form-control" disabled
+                                                                        id="exampleInputtotaldays"
+                                                                        aria-describedby="totaldays">
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-4 gx-3">
-                                                                <label for="exampleInputtodate"
-                                                                    class="form-label poppins">To Date</label>
-                                                                <input type="date" class="form-control"
-                                                                    id="exampleInputtodate" aria-describedby="todate">
+
+                                                            <div class="row mt-5" id="repeatRow">
+                                                                <div class="col gx-3">
+                                                                    <div class="">
+                                                                        <label for="exampleInputleavetype"
+                                                                            class="form-label poppins">Leave Type</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="exampleInputleavetype"
+                                                                            aria-describedby="leavetype">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col gx-3">
+                                                                    <div class="">
+        
+                                                                        <label for="exampleInputleavetypedays"
+                                                                            class="form-label poppins">No: of Days</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="exampleInputleavetypedays"
+                                                                            aria-describedby="leavetype">
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-4">
-                                                                <label for="exampleInputtotaldays"
-                                                                    class="form-label poppins">Total Days</label>
-                                                                <input type="text" class="form-control" disabled
-                                                                    id="exampleInputtotaldays"
-                                                                    aria-describedby="totaldays">
+                                                        </form>
+                                                        <div class="row  mb-3 text-center mt-4">
+
+                                                            <div class="col align-self-center">
+                                                                <button type="button" class="btn btn-outline-success"
+                                                                    onclick="addRow()">Add</button>
+                                                            </div>
+                                                            <div class="col align-self-center">
+                                                                <button type="button" class="btn btn-outline-danger"
+                                                                    onclick="removeRow()">Remove</button>
                                                             </div>
                                                         </div>
-                                                    </form>
-                                                    <div class="row" id="repeatRow">
-                                                        <div class="col gx-3">
-                                                            <div class="">
-                                                                <label for="exampleInputleavetype"
-                                                                    class="form-label poppins">Leave Type</label>
-                                                                <input type="text" class="form-control"
-                                                                    id="exampleInputleavetype"
-                                                                    aria-describedby="leavetype">
-                                                            </div>
+                                                        <div class="row">
+                                                            <button type="button" class="btn btn-outline-primary"
+                                                            >Request Leave</button>
+                                                            <button type="button" class="btn btn-outline-danger mt-4"
+                                                            >Cancel</button>
+
                                                         </div>
-                                                        <div class="col gx-3">
-                                                            <div class="">
-
-                                                                <label for="exampleInputleavetypedays"
-                                                                    class="form-label poppins">No: of Days</label>
-                                                                <input type="text" class="form-control"
-                                                                    id="exampleInputleavetypedays"
-                                                                    aria-describedby="leavetype">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3 align-self-center">
-
-                                                    <div class="col-6">
-                                                        <button type="button" class="btn btn-outline-success"
-                                                            onclick="addRow()">Add</button>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <button type="button" class="btn btn-outline-danger"
-                                                            onclick="removeRow()">Remove</button>
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-4 mb-4">
-                                                    <div class="col">
-                                                        <button type="button" class="btn btn-outline-primary"
-                                                            onclick="addRow()">Request Leave</button>
-                                                    </div>
-
-                                                    <div class="col align-self-end">
-                                                        <button type="button" class="btn btn-outline-danger"
-                                                            onclick="addRow()">Cancel</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -185,6 +189,40 @@
                                                     </ul>
                                                 </div>
                                             </div>
+
+                                            <!-- <div class="card"> -->
+                                                <div class="card-body p-3">
+                                                    <h2 class="poppins font26">Pending Leave Request</h2>
+                                                    <div class="row row-cols-1">
+                                                        <ul class="list-group">
+                                                            <li class="list-group-item">
+                                                                <div class="col">
+                                                                    <h6 class="poppins font18">Sick Leave (18/09/2023)
+                                                                        <span
+                                                                            class="badge text-bg-warning">Pending</span>
+                                                                    </h6>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <div class="col">
+                                                                    <h6 class="poppins font18">Sick Leave (18/09/2023)
+                                                                        <span
+                                                                            class="badge text-bg-warning">Pending</span>
+                                                                    </h6>
+                                                                </div>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                <div class="col">
+                                                                    <h6 class="poppins font18">Sick Leave (18/09/2023)
+                                                                        <span
+                                                                            class="badge text-bg-warning">Pending</span>
+                                                                    </h6>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            <!-- </div> -->
                                         </div>
                                     </div>
 
@@ -199,7 +237,7 @@
 
                                             </div>
 
-                                            <div class="card card-height">
+                                            <!-- <div class="card card-height"> -->
                                                 <div class="card-body p-3">
                                                     <h2 class="poppins font26">Approved/Rejected Leave</h2>
                                                     <div class="row row-cols-1">
@@ -231,7 +269,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            <!-- </div> -->
                                             <!-- </div> -->
                                         </div>
 
