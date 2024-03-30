@@ -21,7 +21,8 @@
                 <nav class="navbar navbar-expand-lg bg-body-tertiary flex-md-row-reverse">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">Leave Request</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent" tabindex="-1">
@@ -30,10 +31,10 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
-                                
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Profile</a>
-                            </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Profile</a>
+                                </li>
                             </ul>
                             <form class="d-flex me-4" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -47,13 +48,16 @@
                     </div>
                 </nav>
 
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasExampleLabel"><h3>Hi Username,</h3></h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                            <h3>Hi Username,</h3>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        
+
                         <form class="d-flex " role="search">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -66,10 +70,11 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Profile</a>
                             </li>
-                            <!-- <li class="mt-5"> <button class="btn btn-dark" id="themeToggleBtn">Toggle Theme</button></li> -->
+                            <li> <button class="btn btn-dark" id="themeToggleBtnOffcanvas">Toggle Theme</button></li>
+
                         </ul>
                     </div>
-                  </div>
+                </div>
 
             </div>
 
@@ -144,9 +149,19 @@
                                                                         <label for="exampleInputleavetype"
                                                                             class="form-label poppins">Leave
                                                                             Type</label>
-                                                                        <input type="text" class="form-control"
+                                                                        <!-- <input type="text" class="form-control"
+                                                                            id="exampleInputleavetype"
+                                                                            aria-describedby="leavetype"> -->
+
+                                                                        <select class="form-select"
+                                                                            aria-label="Default select example"
                                                                             id="exampleInputleavetype"
                                                                             aria-describedby="leavetype">
+                                                                            <option selected>Select Leave Type</option>
+                                                                            <option value="1">Casual Leave</option>
+                                                                            <option value="2">Annual Leave</option>
+                                                                            <option value="3">Sick Leave</option>
+                                                                        </select>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col gx-3">
@@ -166,7 +181,7 @@
 
                                                             <div class="col align-self-center">
                                                                 <button type="button" class="btn btn-outline-success"
-                                                                    onclick="addRow()">Add</button>
+                                                                    id="addButton" onclick="addRow()">Add</button>
                                                             </div>
                                                             <div class="col align-self-center">
                                                                 <button type="button" class="btn btn-outline-danger"
@@ -323,6 +338,16 @@
                         htmlTag.setAttribute('data-bs-theme', 'dark');
                 });
 
+                const themeToggleBtnOffcanvas = document.getElementById('themeToggleBtnOffcanvas');
+
+                themeToggleBtnOffcanvas.addEventListener('click', () => {
+                    const htmlTag = document.querySelector('html');
+                    htmlTag.hasAttribute('data-bs-theme') ?
+                        htmlTag.removeAttribute('data-bs-theme') :
+                        htmlTag.setAttribute('data-bs-theme', 'dark');
+                });
+
+
                 // Function to calculate total days
                 function calculateTotalDays() {
                     const fromDate = document.getElementById('exampleInputfromdate').value;
@@ -351,19 +376,28 @@
 
                 // Function to add a row
                 function addRow() {
+                    const rows = document.querySelectorAll('.row.mt-5');
                     const rowToClone = document.getElementById('repeatRow');
                     const clonedRow = rowToClone.cloneNode(true);
                     rowToClone.parentNode.appendChild(clonedRow);
+
+                    if (rows.length === 3) { // If the maximum limit is reached, hide the "Add" button
+                        document.getElementById('addButton').style.display = 'none';
+                    }
                 }
 
                 // Function to remove a row
                 function removeRow() {
-                    const rows = document.getElementById('repeatRow');
-                    console.log(rows.length)
+                    const rows = document.querySelectorAll('.row.mt-5'); // Select all rows
                     if (rows.length > 1) {
-                        rows[rows.length - 1].parentNode.removeChild(rows[rows.length - 1]);
+                        rows[rows.length - 1].remove(); // Remove the last row
+                    }
+                    if (rows.length !== 3) { // If the maximum limit is reached, hide the "Add" button
+                        document.getElementById('addButton').style.display = 'initial';
                     }
                 }
+
+
             </script>
         </div>
     </div>
