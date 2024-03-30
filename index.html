@@ -21,9 +21,7 @@
                 <nav class="navbar navbar-expand-lg bg-body-tertiary flex-md-row-reverse">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">Leave Request</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent" tabindex="-1">
@@ -32,6 +30,10 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
+                                
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Profile</a>
+                            </li>
                             </ul>
                             <form class="d-flex me-4" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -44,6 +46,30 @@
                         </div>
                     </div>
                 </nav>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel"><h3>Hi Username,</h3></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        
+                        <form class="d-flex " role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <ul class="navbar-nav mb-2  mb-lg-0">
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Profile</a>
+                            </li>
+                            <!-- <li class="mt-5"> <button class="btn btn-dark" id="themeToggleBtn">Toggle Theme</button></li> -->
+                        </ul>
+                    </div>
+                  </div>
 
             </div>
 
@@ -66,12 +92,6 @@
                                     <h3 class="text-center poppins-600">20</h3>
                                     <h5 class="text-center poppins-500">Overdue Leave</h5>
                                 </div>
-
-
-                                <!-- <div class="col-md-3">
-                                    <h3 class="text-center poppins-600">16</h3>
-                                    <h5 class=" text-center poppins-500">sick Leave</h5>
-                                </div> -->
                             </div>
                         </div>
                     </div>
