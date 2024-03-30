@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
 
+    <!-- Icon for title -->
+    <link rel="icon" href="./assests/leave-application-title-icon.png" type="image/x-icon" />
 
 </head>
-<title>Leave Request</title>
+<title><span><img src="./assests/leave-application-title-icon.png" alt="Icon"
+            style="height: 25px; width: 25px; margin-right: 5px;" /></span>Leave Request</title>
 
 <body>
     <div class="card">
@@ -42,7 +45,10 @@
                             </form>
 
                             <ul class="navbar-nav mb-2 mb-lg-0 gy-5">
-                                <li> <button class="btn btn-dark" id="themeToggleBtn">Toggle Theme</button></li>
+                                <li class="me-5"> <button class="btn btn-dark" id="themeToggleBtn">Toggle Theme</button>
+                                </li>
+                                <li><span class="poppins-600 me-2">User Name</span><img src="./assests/user-icon.png"
+                                        height="40px" width="40px"></li>
                             </ul>
                         </div>
                     </div>
@@ -52,7 +58,7 @@
                     aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                            <h3>Hi Username,</h3>
+                            <h3>Hi User Name,</h3>
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -271,7 +277,6 @@
 
                                             </div>
 
-                                            <!-- <div class="card card-height"> -->
                                             <div class="card-body p-3">
                                                 <h2 class="poppins font26">Approved/Rejected Leave</h2>
                                                 <div class="row row-cols-1">
@@ -300,8 +305,6 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <!-- </div> -->
-                                            <!-- </div> -->
                                         </div>
 
 
@@ -316,7 +319,9 @@
             <!-- Bootstrap Bundle JS -->
             <script type="text/javascript" src="./js/bootstrap.bundle.js"></script>
 
-            <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+            <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script> -->
+
+            <script src='./fullcalendar-6.1.11/./dist/index.global.min.js'></script>
 
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
