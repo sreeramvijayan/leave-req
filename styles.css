@@ -2,20 +2,20 @@
     background:#0d6efd;
 }
 
-.poppins-500{
-    font-family: poppins;
-    font-size: 24px;
+.Calibri-500{
+    font-family: Calibri;
+    font-size: 22px;
     font-weight: 500;
 }
-.poppins-600{
-    font-family: popins;
-    font-size: 24px;
+.Calibri-600{
+    font-family: Calibri;
+    font-size: 31px;
     font-weight: 600;
     color: #0d6efd;
 }
 
-.poppins{
-    font-family: poppins;
+.Calibri{
+    font-family: Calibri;
 }
 
 .custom-height{
@@ -33,6 +33,23 @@ body .card .card-body-custom {
 .card-height{
     height: 100% !important;
 
+}
+.btn-width-100{
+    width: 100px;
+}
+
+   /* Target the calendar header */
+   .fc-toolbar.fc-header-toolbar {
+    background-color: #0d6efd; /* Change background color */
+    color: white; /* Change text color */
+    height: 60px;
+}
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk{
+    display: flex;
+}
+.fc .fc-button-primary{
+    background-color: transparent !important;
+    border: 0px solid transparent
 }
 @media (max-width: 768px) {
     .gy-md-5 {
