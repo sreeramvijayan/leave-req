@@ -8,6 +8,12 @@
     font-weight: 500;
     color: rgb(75, 73, 73);
 }
+.Calibri-500-blue{
+    font-family: Calibri;
+    font-size: 22px;
+    font-weight: 500;
+    color: #0d6efd;
+}
 .Calibri-600{
     font-family: Calibri;
     font-size: 31px;
